@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Social Icons</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: #080d18;
+}
+
+.social-card {
+    width: 100%;
+    max-width: 760px;
+    padding: 55px 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #151f32, #0b101b);
+    border: 1px solid #344156;
+    border-radius: 25px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+}
+
+.tag {
+    display: inline-block;
+    padding: 9px 16px;
+    color: #e5c58e;
+    border: 1px solid #806a43;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 24px 0 15px;
+    font-size: clamp(30px, 6vw, 48px);
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #e5c58e;
+}
+
+.description {
+    max-width: 460px;
+    margin: 0 auto 35px;
+    color: #a5b0c2;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.social {
+    --brand: #e5c58e;
+
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #dce4f1;
+    text-decoration: none;
+    background: #111a29;
+    border: 1px solid #344156;
+    border-radius: 20px;
+    transition: transform .3s ease,
+                background .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+}
+
+.social svg {
+    width: 29px;
+    height: 29px;
+    fill: currentColor;
+}
+
+.social:hover,
+.social:focus-visible {
+    color: var(--brand);
+    background: #1c293c;
+    border-color: var(--brand);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.3);
+    outline: none;
+}
+
+.social::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -36px;
+    padding: 6px 10px;
+    color: #e5c58e;
+    background: #080d18;
+    border: 1px solid #344156;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .2s ease;
+    pointer-events: none;
+}
+
+.social:hover::after,
+.social:focus-visible::after {
+    opacity: 1;
+}
+
+.facebook  { --brand: #1877f2; }
+.instagram { --brand: #e66891; }
+.whatsapp  { --brand: #25d366; }
+.youtube   { --brand: #ff4040; }
+.linkedin  { --brand: #55a8ff; }
+.tiktok    { --brand: #55f2e8; }
+
+.divider {
+    height: 1px;
+    margin: 38px 0 22px;
+    background: linear-gradient(
+        90deg, transparent, #806a43, transparent
+    );
+}
+
+.footer {
+    color: #8996aa;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.footer span {
+    color: #e5c58e;
+}
+
+@media (max-width: 480px) {
+    .social-card {
+        padding: 42px 16px;
+    }
+
+    .social-icons {
+        gap: 20px 14px;
+    }
+
+    .social {
+        width: 61px;
+        height: 61px;
+        border-radius: 16px;
+    }
+
+    .social svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="social-card">
+
+    <div class="tag">✦ Connect With Us ✦</div>
+
+    <h1>Stay <span>Connected.</span></h1>
+
+    <p class="description">
+        Follow us on your favorite social platforms.
+        Discover our latest updates and stay connected.
+    </p>
+
+    <div class="social-icons">
+
+        <!-- Facebook -->
+        <a class="social facebook"
+           href="https://facebook.com/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Facebook" data-name="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.8-.1-1.6-.2-2.4-.2-2.4 0-4 1.5-4 4.2v2.3H7.7V13h2.7v8z"/>
+            </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a class="social instagram"
+           href="https://instagram.com/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram" data-name="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+            </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a class="social whatsapp"
+           href="https://whatsapp.com/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp" data-name="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4.1-1.1l-.5-.3-2.9.8.8-2.8-.3-.5A8 8 0 0 1 12 4zm-3 3c-.3 0-.6.1-.9.5-.3.3-1 1-1 2.3s1 2.6 1.1 2.8c.1.2 2 3.2 5 4.3 2.4 1 2.9.8 3.4.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.7-.5l-2-.9c-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.3.3-.6.1a7.5 7.5 0 0 1-2.3-1.4 8.2 8.2 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.6l-.9-2c-.2-.5-.4-.5-.8-.5z"/>
+            </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a class="social youtube"
+           href="https://youtube.com/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="YouTube" data-name="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23 7a3 3 0 0 0-2.1-2.1C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 17a31 31 0 0 0 .5-5 31 31 0 0 0-.5-5zM9.6 15.5v-7l6 3.5z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="social linkedin"
+           href="https://linkedin.com/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="LinkedIn" data-name="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3.2 9h3.6v12H3.2zm5.8 0h3.5v1.6h.1A3.8 3.8 0 0 1 16 8.7c3.7 0 4.4 2.4 4.4 5.5V21h-3.6v-6c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9z"/>
+            </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a class="social tiktok"
+           href="https://tiktok.com/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="TikTok" data-name="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.6 6.1A6.3 6.3 0 0 1 16 2.5V2h-4.1v13.7a2.8 2.8 0 1 1-2.8-2.8c.4 0 .8.1 1.1.2V8.9a7 7 0 0 0-1.1-.1 6.9 6.9 0 1 0 6.9 6.9V8.8a10 10 0 0 0 5.1 1.4V6.1z"/>
+            </svg>
+        </a>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="footer">
+        Crafted with <span>style & precision</span> · Premium Design
+    </p>
+
+</section>
+
+<script>
+"use strict";
+
+document.querySelectorAll(".social").forEach(function(icon) {
+    icon.addEventListener("click", function() {
+        console.log("Opening social platform:", icon.dataset.name);
+    });
+});
+</script>
+
+</body>
+</html>
